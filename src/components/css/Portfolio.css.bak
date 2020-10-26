@@ -1,0 +1,131 @@
+.headingcontainer {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.topbox  {
+	margin-top: 1.5rem;
+	color: red;
+}
+
+h3 {
+	margin-top: 1rem;
+}
+
+.box {
+	text-align: center;
+}
+
+.headingcontainer img {
+	margin-top: 2rem;
+}
+
+.leftbox {
+	width: 50%;
+}
+
+.rightbox {
+	width: 50%;
+}
+
+.buttonSection {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.btn-grad {
+	background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)
+}
+
+.btn-grad {
+	margin: 10px;
+	padding: 10px 75px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;            
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+	font-size: 18px;
+	font-family: "Calibri";
+	border: 1px solid #000;
+  }
+
+ .btn-grad:hover {
+	background-position: right center; /* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+ }
+
+.skillsBox {
+	max-width: 60%;
+	height: 250px;
+}
+
+.skill1 {
+	position: relative;
+	left: 10px;
+	top: 10px;
+	font-size: 32px;
+}
+
+.skill2 {
+	position: relative;
+	left: 50px;
+	top: 50px;
+	font-size: 24px;
+}
+
+.skill3 {
+	position: relative;
+	left: -120px;
+	top: 150px;
+	font-size: 48px;
+}
+
+.skill4 {
+	position: relative;
+	left: -60px;
+	top: 60px;
+	font-size: 48px;
+}
+
+.skill5 {
+	font-size: 24px;
+}
+
+.resumeBox {
+	margin-top: 2rem;
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.resumePic {
+	padding: 1rem;
+	width: 55%;
+	border: 2px solid #000;
+	border-radius: 50px;
+
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.skillsBox {
+	width: 50%;
+}
+
+.infoBox {
+	width: 50%;
+}

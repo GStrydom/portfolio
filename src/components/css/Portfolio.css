@@ -1,0 +1,221 @@
+.headingcontainer {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.topbox  {
+	margin-top: 1.5rem;
+}
+
+h3 {
+	margin-top: 1rem;
+}
+
+.box {
+	text-align: center;
+}
+
+.headingcontainer img {
+	margin-top: 2rem;
+}
+
+.leftbox {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	width: 50%;
+	padding-left: 0;
+	margin-left: 0;
+}
+
+.leftbox > img {
+	width: 50%;
+}
+
+.rightbox {
+	width: 50%;
+}
+
+.rightbox > h1 {
+	margin-bottom: 1rem;
+}
+
+.rightbox > p {
+	font-size: 18px;
+	margin-top: 0.5rem;
+}
+
+.buttonSection {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.btn-grad {
+	background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)
+}
+
+.btn-grad {
+	margin: 10px;
+	padding: 10px 75px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;            
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+	font-size: 18px;
+	font-family: "Calibri";
+	border: 1px solid #000;
+  }
+
+ .btn-grad:hover {
+	background-position: right center; /* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+ }
+
+.skillsBox {
+	max-width: 80%;
+	height: 250px;
+}
+
+/* Javascript */
+.skill1 {
+	position: relative;
+	left: 10px;
+	top: 10px;
+	font-size: 32px;
+}
+
+/* HTML */
+.skill2 {
+	position: relative;
+	left: 10px;
+	top: 60px;
+	font-size: 32px;
+}
+
+/* PHP */
+.skill3 {
+	position: relative;
+	left: 10px;
+	top: 100px;
+	font-size: 32px;
+}
+
+/* React */
+.skill4 {
+	position: relative;
+	left: 300px;
+	top: -95px;
+	font-size: 32px;
+}
+
+/* Codeigniter */
+.skill5 {
+	position: relative;
+	left: 300px;
+	top: -40px;
+	font-size: 32px;
+}
+
+/* Django */
+.skill6 {
+	position: relative;
+	left: 850px;
+	top: -170px;
+	font-size: 32px;
+}
+
+/* Python */
+.skill7 {
+	position: relative;
+	font-size: 30px;
+	left: 1050px;
+	top: -100px;
+}
+
+/* Photoshop */
+.skill8 {
+	position: relative;
+	font-size: 24px;
+	left: 340px;
+	top: -190px;
+}
+
+/* Illustrator */
+.skill9 {
+	position: relative;
+	font-size: 24px;
+	left: 620px;
+	top: -218px;
+}
+
+/* MySQL */
+.skill10 {
+	position: relative;
+	font-size: 24px;
+	left: 300px;
+	top: -100px;
+}
+
+.resumeSection {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.resumeBox {
+	background: url(https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	margin-top: 2.5rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.resumePic {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 2px solid #000;
+	border-radius: 20px;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.containerBox {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	max-width: 1120px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.skillsBox {
+	display: flex;
+	flex-flow: column;
+	width: 50%;
+}
+
+.infoBox {
+	width: 50%;
+}
+
+
+.showSkillText:hover {
+	color: #888888;
+}

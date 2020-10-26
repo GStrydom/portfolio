@@ -1,0 +1,136 @@
+import React, { useState, useEffect } from 'react';
+import '../../App.css';
+
+import Bounce from 'react-reveal/Bounce';
+import Fade from 'react-reveal/Fade';
+import Roll from 'react-reveal/Roll';
+import Zoom from 'react-reveal/Zoom';
+import LightSpeed from "react-reveal/LightSpeed";
+
+import Footer from '../Footer';
+
+import "../css/Portfolio.css";
+
+import profilepic from "../images/profile-140x140.png";
+import resumepic from "../images/resume.jpg";
+
+
+// const skills = ["Javascript", "PHP", "HTML/CSS", "jQuery"];
+
+
+const Portfolio = () => {
+	return (
+  		<>
+  			<PortfolioHead />
+  			<Footer />
+  		</>
+	);
+}
+
+const PortfolioHead = () => {
+	const [showSkills, setShowSkills] = useState(false);
+	return(
+		<>
+			<div className="topbox">
+				<Fade right>
+					<h1>Gregory Strydom</h1>
+				</Fade>
+			</div>
+
+			<section className="headingcontainer">
+				<div className="leftbox">
+					<Fade left>
+						<h3>Web Developer</h3>
+					</Fade>
+						
+					<Zoom>
+						<img src={profilepic} alt="Profile Pic" />
+					</Zoom>
+				</div>
+
+				<div className="rightbox">
+					<Bounce top>
+						<h1>About Me</h1>
+					</Bounce>
+
+					<p>
+						I have over 10 years of experience as a software engineer, and have worked at both small startups and 
+						large organizations. While I'm a proficient front-end developer, my expertise is in building scalable
+						backend services.  I love creating things and researching new ideas and technologies. While software 
+						engineering problems are often intrinsically fun to tackle, I'm most attracted to solving real customer
+						problems with a business justification.
+					</p>
+				</div>
+			</section>
+
+			<section className="buttonSection">
+				<div>
+					<button className="btn-grad" onClick={() => setShowSkills(!showSkills)}>Show Skills</button>
+				</div>
+				{showSkills && <PortfolioSkills />}
+			</section>
+		</>
+	)
+}
+
+const PortfolioSkills = () => {
+	const [showResume, setShowResume] = useState(false);
+	// const [buttonName, setButtonName] = useState(false);
+
+	const [size, setSize] = useState(window.innerWidth);
+	const checkSize = () => {
+		setSize(window.innerWidth);
+	}
+
+	useEffect(() => {
+		window.addEventListener('resize', checkSize);
+		return () => {
+			window.removeEventListener('resize', checkSize);
+		};
+	}, []);
+	return(
+		<>
+			<div className="skillsTitle">
+				<LightSpeed left>
+					<h1>
+						Skills
+					</h1>
+				</LightSpeed>
+			</div>
+
+			<div className="containerBox">
+				<section className="skillsBox">
+					<Zoom><span className="skill1">Javascript</span></Zoom>
+					<Zoom><span className="skill2">PHP</span></Zoom>
+					<Zoom><span className="skill3">HTML/CSS</span></Zoom>
+					<Zoom><span className="skill4">ReactJS</span></Zoom>
+					<Zoom><span className="skill5">Photoshop</span></Zoom>
+				</section>
+
+				<section className="infoBox">
+
+				</section>
+			</div>
+
+				<section className="buttonSection">
+					<div>
+						<button className="btn-grad" onClick={() => setShowResume(!showResume)}>Show Resume</button>
+					</div>
+					{showResume && <PortfolioResume />}
+				</section>
+		</>
+	)
+}
+
+
+const PortfolioResume = () => {
+	return (
+		<>
+			<section className="resumeBox">
+				<img className="resumePic" src={resumepic} alt="Gregory Strydom Resume" />
+			</section>
+		</>
+	)
+}
+
+export default Portfolio;

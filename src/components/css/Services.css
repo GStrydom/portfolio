@@ -1,0 +1,28 @@
+.contactLink {
+	color: blue;
+}
+
+.flashCont {
+	display: inline-block;
+}
+
+.jumbotron {
+	padding-top: 1rem;
+	padding-bottom: 2rem;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header {
+	color: white;
+}
+
+.webBox {
+	text-align: center;
+	align-self: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

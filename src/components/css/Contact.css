@@ -1,0 +1,41 @@
+
+body::after {
+  content: "";
+  background: url(https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+.choiceContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  	width: 80%;
+	margin: 0 auto;
+}
+
+.form-column {
+	max-width: 850px;
+	height: 50vh;
+}
+
+.formBox {
+	height: 100%;
+}
+
+.formBoxB {
+	padding: 2rem;
+}
+
+.mexBox {
+	display: flex;
+	align-items: center;
+}
+

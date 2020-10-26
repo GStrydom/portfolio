@@ -1,0 +1,93 @@
+import React from 'react';
+
+import StopWatch from "./scripts/Stopwatch";
+
+import Slider from 'react-animated-slider';
+import 'react-animated-slider/build/horizontal.css';
+
+import "./WheelAnimations.css";
+import "./css/Wheel.css"
+
+
+const content = [
+    {
+        title: "Stopwatch",
+        description: "A stopwatch program that allows saving of times to a database.",
+        button: "Try It!",
+        image: 'https://images.pexels.com/photos/2530130/pexels-photo-2530130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        codelang: "Javascript, PHP",
+        github: "https://www.github.com"
+
+    },
+
+    {
+        title: "Magic 8 Ball",
+        description: "The infamous magic 8 ball, has been used for many things over the years.",
+        button: "Try It!",
+        image: "data:image/jpeg;base64,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",
+        language: "Javascript, PHP",
+        github: ""
+
+    },
+
+    {
+        title: "Weather",
+        description: "Know the weather in your location where ever you are simply and easily.",
+        button: "Try It!",
+        image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        language: "Javascript, PHP",
+        github: ""
+
+    },
+
+    {
+        title: "Phone & Email",
+        description: "A lightweight script to extract phone and email entries from text files.",
+        button: "Try It!",
+        image: "https://images.pexels.com/photos/193003/pexels-photo-193003.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        language: "Javascript, Python",
+        github: ""
+
+    },
+
+    {
+        title: "Torrex",
+        description: "An early torrent downloader using Python and JS. Still in development.",
+        button: "Try It!",
+        image: "https://images.pexels.com/photos/4344251/pexels-photo-4344251.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        language: "Javascript, Python",
+        github: ""
+
+    },
+]
+
+
+const Wheel = () => {
+    return (
+        <>
+            <div>
+                <Slider className="slider-wrapper">
+                    {content.map((item, index) => (
+                    <div key={index} className="slider-content" style={{ background: `url('${item.image}') no-repeat center center`}}>
+                    <div className="inner">
+                        <h1>{item.title}</h1>
+                        <p>{item.description}</p>
+                        <button>{<StopWatch />}</button>
+                    </div>
+                    <section>
+                        <span>
+                            <strong>{item.codelang}</strong>
+                        </span>
+                        <span>
+                            <strong>{item.github}</strong>
+                        </span>
+                    </section>
+                </div>
+            ))}
+        </Slider>
+            </div>
+        </>
+    )
+}
+
+export default Wheel;
