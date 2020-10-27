@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { Modal, Button } from "semantic-ui-react";
-
-
 import StopWatch from "./scripts/StopWatch";
 import EightBall from "./scripts/EightBall";
 import Weather from "./scripts/Weather";

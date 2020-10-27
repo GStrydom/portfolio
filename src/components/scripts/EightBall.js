@@ -1,17 +1,9 @@
 import React, { useState } from "react";
-import { Button, Header, Image, Modal } from 'semantic-ui-react';
-
-
-const Ball = () => {
-  return(
-    <>
-    </>
-  )
-}
+import { Button, Modal } from 'semantic-ui-react';
 
 
 function EightBall() {
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = useState(false)
 
   return (
     <Modal

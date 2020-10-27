@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Button, Header, Image, Modal } from 'semantic-ui-react';
+import { Button, Modal } from 'semantic-ui-react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-regular-svg-icons'

@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import { Radio, Label, Message, Divider, Card, Button, Checkbox, Form, TextArea, Select, Confirm, Modal, Header, Icon, Grid, Segment, Rail } from 'semantic-ui-react'
+import { Radio, Message, Divider, Button, Form, TextArea, Header, Icon, Segment } from 'semantic-ui-react'
 
 import ReactCardFlip from 'react-card-flip';
-
-import { Link } from "react-router-dom";
 
 import axios from "axios";
 
@@ -37,7 +35,7 @@ const ContactChoice = () => {
 	const [enqADisplay, setEnqADisplay] = useState("visible");
 	const [enqBDisplay, setEnqBDisplay] = useState("visible");
 
-	const [enqAHeight, setEnqHeight] = useState("200px");
+	const [enqHeight, setEnqHeight] = useState("200px");
 
 	const [enqPad, setEnqPad] = useState("5rem");
 
@@ -56,7 +54,11 @@ const ContactChoice = () => {
 
 	const handleBClicked = () => {
 		setEnqADisplay("none");
-		setEnqBWidth("100%"); 
+		setEnqBWidth("100%");
+		setTextB("");
+		setEnqBBack('linear-gradient(to right, #FFFFFF, #FFFFFF)');
+		setEnqPad("1rem");
+		setEnqHeight("800px");
 		setShowFeed(!showFeed);
 	};
 
@@ -74,13 +76,13 @@ const ContactChoice = () => {
 			<Fade cascade>
 				<Segment basic>
 					<div className="choiceContainer">
-						<Segment basic className="enqA" style={{ backgroundImage: enqABack, width: enqAWidth, padding: enqPad, display: enqADisplay, minHeight: enqAHeight }}>
+						<Segment basic className="enqA" style={{ backgroundImage: enqABack, width: enqAWidth, padding: enqPad, display: enqADisplay, minHeight: enqHeight }}>
 							<h1 onClick={handleAClicked}>{textA}</h1>
 							{showBus && <ContactForm />}
 						</Segment>
 					
-						<Segment basic className="enqB" style={{ backgroundImage: enqBBack, width: enqBWidth, padding: enqPad, display: enqBDisplay }}>
-							<h1 onClick={handleAClicked}>{textB}</h1>
+						<Segment basic className="enqB" style={{ backgroundImage: enqBBack, width: enqBWidth, padding: enqPad, display: enqBDisplay, minHeight: enqHeight }}>
+							<h1 onClick={handleBClicked}>{textB}</h1>
 							{showBus && <ContactForm flipped="true" />}
 						</Segment>
 					</div>
@@ -141,11 +143,11 @@ const ContactForm = (props) => {
 
 	const [radioValue, setRadioValue] = useState("this");
 
-	const handleChange = () => {
-
+	const onRadioChange = () => {
+		setRadioValue("this");
 	}
 
-	if(props.flippedState == "true") {
+	if(props.flippedState === "true") {
 		setFlipped(true);
 	}
 
@@ -183,6 +185,7 @@ const ContactForm = (props) => {
 				          label='First Name'
 				          placeholder='First Name'
 				          type='text'
+				          onChange={onFirstNameChange}
 						  value={busFirstName}
 				        />
 				        <Form.Input
@@ -190,6 +193,7 @@ const ContactForm = (props) => {
 				          label='Last Name'
 				          placeholder='Last Name'
 				          type='text'
+				          onChange={onLastNameChange}
 						  value={busLastName}
 				        />
       				</Form.Group>
@@ -199,11 +203,13 @@ const ContactForm = (props) => {
       						label='Phone Number' 
       						placeholder='Phone Number' 
       						type='text'
+      						onChange={onBusPhoneChange}
 							value={busPhone}
       					/>
       					<Form.Input 
       						label='Email' type='email'
-      						placeholder='Email' 
+      						placeholder='Email'
+      						onChange={onBusEmailChange}
 							value={busEmail}
       					/>
       				</Form.Group>
@@ -218,7 +224,7 @@ const ContactForm = (props) => {
 					            name='radioGroup'
 					            value='this'
 					            checked={radioValue === 'this'}
-					            onChange={handleChange}
+					            onChange={onRadioChange}
 				          	/>
         				</Form.Field>
         				<Form.Field>
@@ -227,7 +233,7 @@ const ContactForm = (props) => {
 					            name='radioGroup'
 					            value='that'
 					            checked={radioValue === 'that'}
-					            onChange={handleChange}
+					            onChange={onRadioChange}
 				          	/>
         				</Form.Field>
       				</Form.Group>
@@ -236,11 +242,12 @@ const ContactForm = (props) => {
 						<TextArea
 							label='Message'
 							placeholder='Enter your message.'
+							onChange={onBusMessageChange}
 							value={busMessage}
 						/>
 					</Form.Group>
 					
-      				<Button size="big" color='blue'>Contact</Button>
+      				<Button size="big" color='blue' onClick={submitEmail}>Contact</Button>
     			</Form>
     			<Message size='large' attached="bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 					<Header as="h4" style={{ marginBottom: '1rem' }}>Switch To Feedback</Header>
@@ -263,11 +270,13 @@ const ContactForm = (props) => {
 				          label='Name'
 				          placeholder='Name'
 				          type='text'
+				          onChange={onFeedNameChange}
 						  value={feedName}
 				        />
 				        <Form.Input 
       						label='Email' type='email'
-      						placeholder='Email' 
+      						placeholder='Email'
+      						onChange={onFeedEmailChange}
 							value={feedEmail}
       					/>
       				</Form.Group>
@@ -276,11 +285,12 @@ const ContactForm = (props) => {
 						<TextArea
 							label='Message'
 							placeholder='Enter your message.'
+							onChange={onFeedMessageChange}
 							value={feedMessage}
 						/>
 					</Form.Group>
 					
-      				<Button size="big" color='red'>Contact</Button>
+      				<Button size="big" color='red' onClick={submitEmail}>Contact</Button>
     			</Form>
     			<Message size='large' attached="bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 					<Header as="h6">Switch To Business</Header>

@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
-import Roll from 'react-reveal/Roll';
 import Zoom from 'react-reveal/Zoom';
-import LightSpeed from "react-reveal/LightSpeed";
 
-import { Dropdown, Divider, Header, Icon, Image, Grid } from 'semantic-ui-react'
+import { Divider, Header, Icon, Image, Grid } from 'semantic-ui-react'
 
 import Footer from '../Footer';
 
@@ -82,27 +80,9 @@ const PortfolioHead = () => {
 	)
 }
 
-const SkillInfo = (props) => {
-	if(props.skillId == "1") {
-		return (<h1>Javascript</h1>);
-	}
-}
-
 const PortfolioSkills = () => {
 	const [showResume, setShowResume] = useState(false);
 	// const [buttonName, setButtonName] = useState(false);
-
-	const [size, setSize] = useState(window.innerWidth);
-	const checkSize = () => {
-		setSize(window.innerWidth);
-	}
-
-	useEffect(() => {
-		window.addEventListener('resize', checkSize);
-		return () => {
-			window.removeEventListener('resize', checkSize);
-		};
-	}, []);
 
 	return(
 		<>
