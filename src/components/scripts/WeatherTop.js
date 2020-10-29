@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import Weather from './Weather';
 
-import '../sass/topstyle.scss';
+import '../sass/topstyles.scss';
 
 
 class WeatherTop extends Component {
 	constructor(props) {
 		super(props);
-        this.state = {};
+        this.state = {
+        	location: props.location
+        };
 	}
 
 	render() {

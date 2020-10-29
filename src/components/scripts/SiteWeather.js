@@ -4,7 +4,7 @@ import { Button, Modal } from 'semantic-ui-react';
 import WeatherApp from "./WeatherApp";
 
 
-function Weather() {
+function SiteWeather() {
   const [open, setOpen] = React.useState(false)
 
   return (
@@ -14,7 +14,7 @@ function Weather() {
       open={open}
       trigger={<Button>Launch Script</Button>}
     >
-      <Modal.Header> == Weather Script ==</Modal.Header>
+      <Modal.Header> == Whats the Weather? ==</Modal.Header>
       <Modal.Content>
 		<WeatherApp />
       </Modal.Content>
@@ -35,4 +35,4 @@ function Weather() {
   )
 }
 
-export default Weather;
+export default SiteWeather;
