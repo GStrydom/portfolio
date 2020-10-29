@@ -40,9 +40,9 @@ const Head = () => {
 						<Header.Content><h1 style={{ color: "#FFFFFF" }}><strong>Our Services</strong></h1></Header.Content>
 					</Header>
 
-					<Message size="big">
+					<Message size="mini">
 						<p>
-				    		We handle each project with great care and treat customer with the time and attention theu deserve. If the service you requested in not listed on this page, you can <span className="flashCont"><Flash><OverlayTrigger trigger="hover" placement="right" overlay={popover}><span className="contactLink">contact</span></OverlayTrigger></Flash></span> us to maek ararngements.
+				    		We handle each project with great care and treat customer with the time and attention they deserve. If the service you requested in not listed on this page, you can <span className="flashCont"><Flash><OverlayTrigger trigger="hover" placement="right" overlay={popover}><span className="contactLink">contact</span></OverlayTrigger></Flash></span> us to make arrangements.
 						</p>
 					</Message>
 
@@ -64,7 +64,7 @@ const ServiceSection = () => {
 					<Grid.Column style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
 						<Header as="h1" style={{ paddingBottom: '2rem' }}>Web Development</Header>
 						<p style={{ width: '50%', paddingBottom: '2rem', fontSize: '18px' }}>
-							We offer a wide range of Web Development solutions ranging from basic Personal HTML/CSS sites, to full blown CMS Apps deisgned to meeting
+							We offer a wide range of Web Development solutions ranging from basic Personal HTML/CSS sites, to complete CMS Apps deisgned to meet
 							the demands of business.  We are trained in multiple Web FrameWorks including React, Laravel and Django, and are proficient with most DBMS. 
 						</p>
 						<Button primary animated size="large">
@@ -86,7 +86,7 @@ const ServiceSection = () => {
 					<Grid.Column style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
 						<Header as="h1" style={{ paddingBottom: '2rem' }}>Graphic Design</Header>
 						<p style={{ width: '50%', paddingBottom: '2rem', fontSize: '18px' }}>
-							Whatever your logo or Graphic Design needs, we will ake it our mission to make sure youa re satisfied with the final result. We have many years experience
+							Whatever your logo or Graphic Design needs, we will make it our mission to make sure you are satisfied with the final result. We have many years experience
 							with Adobe Photoshop & Illustrator and uesd many more tools to create High Quality designs. 
 						</p>
 						<Button primary animated size="large">

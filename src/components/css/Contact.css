@@ -13,12 +13,8 @@ body::after {
   z-index: -1;   
 }
 
-.choiceContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  	width: 80%;
-	margin: 0 auto;
+.enqA, .enqB > h1:hover {
+  cursor: pointer;
 }
 
 .form-column {

@@ -1,38 +1,28 @@
-import React from "react";
-import { Button, Modal } from 'semantic-ui-react';
+import React, { Component } from 'react';
+
+import SunImage from '../../images/sun.png';
 
 
-function Weather() {
-  const [open, setOpen] = React.useState(false)
+class Weather extends Component {
+	constructor(props) {
+		super(props);
+	}
 
-  return (
-    <Modal
-      onClose={() => setOpen(false)}
-      onOpen={() => setOpen(true)}
-      open={open}
-      trigger={<Button>Launch Script</Button>}
-    >
-      <Modal.Header> == Weather Script ==</Modal.Header>
-      <Modal.Content>
-		<div>
-			<h1>00.00.00</h1>
-		</div>
-      </Modal.Content>
-      <Modal.Actions>
-        <Button color='red' onClick={() => setOpen(false)}>
-          Close
-        </Button>
-        <Button
-		  color='green'
-          content="Done"
-          labelPosition='right'
-          icon='checkmark'
-          onClick={() => setOpen(false)}
-          positive
-        />
-      </Modal.Actions>
-    </Modal>
-  )
+	render() {
+		return(
+			<>
+				<div className="weather-container">
+					<div className="header">Location Name</div>
+					<div className="inner-container">
+						<div className="image"><img src={SunImage} alt="Sun" /></div>
+                        <div className="current-weather">10&deg;</div>
+					</div>
+                    <div className="footer">Sunny</div>
+                    <button className='btn btn-search'>Search Location</button>
+				</div>
+			</>
+		)
+	}
 }
 
 export default Weather;

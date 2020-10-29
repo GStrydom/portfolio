@@ -1,0 +1,23 @@
+import React from 'react';
+import Weather from "./Weather";
+
+
+const WeatherApp = () => {
+  return (
+    <>
+      <div className='mainContainer'>
+          <div className="upContainer">
+            <div className='top-section'>
+                <Top />
+            </div>
+              
+            <div className='bottom-section'>
+                <Bottom />
+            </div>
+          </div>
+      </div>
+    </>
+  );
+}
+
+export default WeatherApp;

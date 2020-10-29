@@ -75,17 +75,15 @@ const ContactChoice = () => {
 				</Divider>
 			<Fade cascade>
 				<Segment basic>
-					<div className="choiceContainer">
-						<Segment basic className="enqA" style={{ backgroundImage: enqABack, width: enqAWidth, padding: enqPad, display: enqADisplay, minHeight: enqHeight }}>
-							<h1 onClick={handleAClicked}>{textA}</h1>
-							{showBus && <ContactForm />}
-						</Segment>
-					
-						<Segment basic className="enqB" style={{ backgroundImage: enqBBack, width: enqBWidth, padding: enqPad, display: enqBDisplay, minHeight: enqHeight }}>
-							<h1 onClick={handleBClicked}>{textB}</h1>
-							{showBus && <ContactForm flipped="true" />}
-						</Segment>
-					</div>
+					<Segment basic className="enqA" style={{ backgroundImage: enqABack, width: enqAWidth, padding: enqPad, display: enqADisplay, minHeight: enqHeight }}>
+						<h1 onClick={handleAClicked}>{textA}</h1>
+						{showBus && <ContactForm />}
+					</Segment>
+				
+					<Segment basic className="enqB" style={{ backgroundImage: enqBBack, width: enqBWidth, padding: enqPad, display: enqBDisplay, minHeight: enqHeight }}>
+						<h1 onClick={handleBClicked}>{textB}</h1>
+						{showFeed && <ContactForm isFlipped={true} />}
+					</Segment>
 				</Segment>
 			</Fade>
 		</>
@@ -102,6 +100,8 @@ const ContactForm = (props) => {
 	const [feedName, setFeedName] = useState("");
 	const [feedEmail, setFeedEmail] = useState("");
 	const [feedMessage, setFeedMessage] = useState("");
+
+	const [isFlipped, setFlipped] = useState(false);
 
 	const onFirstNameChange = (e) => {
 		setBusFirstName(e.target.value);
@@ -135,10 +135,8 @@ const ContactForm = (props) => {
 		setFeedMessage(e.target.value);
 	}
 
-	const [flipped, setFlipped] = useState(false);
-
 	const handleFlip = () => {
-		setFlipped(!flipped);
+		setFlipped(!isFlipped);
 	}
 
 	const [radioValue, setRadioValue] = useState("this");
@@ -169,14 +167,14 @@ const ContactForm = (props) => {
 
 	return (
 		<Pulse>
-		<ReactCardFlip isFlipped={flipped} flipDirection="horizontal">
+		<ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
 			<Segment basic style={{ marginTop: '0', paddingTop: '0' }}>
 				<Flip left cascade><Header as="h1" style={{ marginTop: '0', paddingTop: '0', marginBottom: '3rem' }}>We Take Business Seriously</Header></Flip>
     			<Message
     				style={{ color: '#FFFFFF', backgroundImage: 'linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6)' }}
 					attached
-     	 			content='Let us know your Business requirements and an agent will get back to your shortly.'
-     	 			size='large'
+     	 			content='Let us know your software requirements and an agent will get back to your shortly.'
+     	 			size='tiny'
     			/>
     			<Form className='attached fluid segment formBox' size="big">
       				<Form.Group widths='equal'>
@@ -261,7 +259,7 @@ const ContactForm = (props) => {
     				style={{ color: '#FFFFFF', backgroundImage: 'linear-gradient(to right, #f85032, #e73827)' }}
 					attached
      	 			content='We appreciate and take note of every feedback message we receive, so please let us know how you think we can improve.'
-     	 			size='large'
+     	 			size='tiny'
     			/>
     			<Form className='attached fluid segment formBox' size="big">
       				<Form.Group widths='equal'>
