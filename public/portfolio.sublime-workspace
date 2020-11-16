@@ -19,6 +19,15 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/Users/Greg/Documents/GitHub/portfolio/src/App.js",
+			"settings":
+			{
+				"buffer_size": 899,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -57,10 +66,13 @@
 	"expanded_folders":
 	[
 		"/C/Users/Greg/Documents/GitHub/portfolio",
-		"/C/Users/Greg/Documents/GitHub/portfolio/public"
+		"/C/Users/Greg/Documents/GitHub/portfolio/src",
+		"/C/Users/Greg/Documents/GitHub/portfolio/src/components"
 	],
 	"file_history":
 	[
+		"/C/Users/Greg/Documents/GitHub/portfolio/src/components/Wheel.js",
+		"/C/Users/Greg/Documents/GitHub/portfolio/src/components/pages/Scripts.js",
 		"/C/Users/Greg/Documents/GitHub/portfolio/public/index.html",
 		"/C/Users/Greg/Documents/GitHub/portfolio/public/index.css",
 		"/C/Users/Greg/Documents/GitHub/portfolio/src/index.js",
@@ -128,8 +140,43 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/Greg/Documents/GitHub/portfolio/src/App.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 899,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								438,
+								438
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
