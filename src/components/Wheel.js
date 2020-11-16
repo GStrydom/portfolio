@@ -2,7 +2,7 @@ import React from 'react';
 
 import StopWatch from "./scripts/StopWatch";
 import EightBall from "./scripts/EightBall";
-import SiteWeather from "./scripts/SiteWeather";
+// import SiteWeather from "./scripts/SiteWeather";
 import Phone from "./scripts/Phone";
 import Torrex from "./scripts/Torrex";
 
@@ -43,7 +43,7 @@ const content = [
         image: "https://images.unsplash.com/photo-1508697014387-db70aad34f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
         codelang: "Javascript, PHP",
         github: "",
-        component: <SiteWeather />
+        component: ''
 
     },
 
