@@ -1,13 +1,16 @@
-import React from 'react';
-import Navbar from './components/Navbar';
-import 'semantic-ui-css/semantic.min.css'
-import './App.css';
-import Home from './components/pages/Home';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+import Navbar from './components/Navbar';
+import Home from './components/pages/Home';
 import Services from './components/pages/Services';
 import Portfolio from './components/pages/Portfolio';
 import Scripts from './components/pages/Scripts';
 import Contact from './components/pages/Contact';
+
+
+import 'semantic-ui-css/semantic.min.css'
+import './App.css';
 
 
 function App() {

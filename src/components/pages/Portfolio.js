@@ -4,12 +4,13 @@ import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 
+import ReactImageMagnify from 'react-image-magnify';
+
 import { Divider, Header, Icon, Image, Grid } from 'semantic-ui-react'
 
 import Footer from '../Footer';
 
 import "../css/Portfolio.css";
-import '../../App.css';
 
 import profilepic from "../images/profile-140x140.png";
 import resumepic from "../images/resume.jpg";
@@ -47,7 +48,7 @@ const PortfolioHead = () => {
 					</Fade>
 						
 					<Zoom>
-						<Image src={profilepic} alt="Profile Image" size="medium" />
+						<Image src={profilepic} alt="Profile Image" size="medium" rounded />
 					</Zoom>
 				</div>
 
@@ -66,7 +67,7 @@ const PortfolioHead = () => {
 				</div>
 			</section>
 
-			<section className="buttonSection">
+			<section>
 				<Divider horizontal>
 					<Header as='h1'>
 						<div className="showSkillText">
@@ -156,7 +157,6 @@ const PortfolioSkills = () => {
 			<section className="resumeSection">
 				{showResume && <PortfolioResume />}
 			</section>
-			<Divider hidden />
 		</>
 	)
 }
@@ -166,7 +166,22 @@ const PortfolioResume = () => {
 	return (
 		<>
 			<section className="resumeBox">
-				<Bounce left><Image className="resumePic" size="large" src={resumepic} alt="Gregory Strydom Resume" /></Bounce>
+				<Bounce left>
+					<ReactImageMagnify {...{
+						smallImage: {
+							alt: 'Resume Small',
+							src: resumepic,
+							width: 600,
+							height: 800,
+						},
+						largeImage: {
+							alt: 'Resume Small',
+							src: resumepic,
+							width: 1000,
+							height: 1200,
+						}
+					}} />
+				</Bounce>
 			</section>
 		</>
 	)

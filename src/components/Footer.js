@@ -9,6 +9,7 @@ function Footer() {
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
+      <Link to='/contact'>
         <SemanticButton animated color="blue" size="huge" style={{ marginBottom: '3rem' }}>
          <SemanticButton.Content visible>
            Contact Us Now
@@ -16,7 +17,8 @@ function Footer() {
           <SemanticButton.Content hidden>
            Lets Go!
           </SemanticButton.Content>
-       </SemanticButton>
+        </SemanticButton>
+      </Link>
         <p className='footer-subscription-text'>
           Subscribe for the latest news
         </p>
@@ -36,11 +38,11 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/about'>Who are we?</Link>
+            <Link onClick={window.scroll(0,0)} to='/services'>Who are we?</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
-            <Link to='/contact'>Email Us!</Link>
+            <Link onClick={window.scroll(0,0)} to='/contact'>Email Us!</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
