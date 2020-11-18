@@ -44,7 +44,7 @@ const Head = () => {
 const ServiceSection = () => {
 	return (
 		<>
-			<Grid textAlign='center' columns='equal' centered stackable>
+			<Grid textAlign='center' columns='equal' centered stackable padded relaxed>
 				<Grid.Row textAlign='center'>
 					<Grid.Column textAlign='center' verticalAlign='middle'>
 						<Label color='red' size='massive' ribbon>Web Development</Label>
@@ -58,13 +58,13 @@ const ServiceSection = () => {
 						</Button>
 					</Grid.Column>
 
-					<Grid.Column>
+					<Grid.Column centered textAlign='center'>
 						<Image rounded size="large" src="https://images.pexels.com/photos/1789968/pexels-photo-1789968.jpeg?auto=compress&cs=tinysrgb&dpr=1" />
 					</Grid.Column>
 				</Grid.Row>
 
 				<Grid.Row textAlign='center'>
-					<Grid.Column>
+					<Grid.Column centered textAlign='center'>
 						<Image rounded size="large" src="https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&dpr=1" />
 					</Grid.Column>
 
