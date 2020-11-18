@@ -82,7 +82,7 @@ const ContactChoice = () => {
 				
 					<Segment basic className="enqB" style={{ backgroundImage: enqBBack, width: enqBWidth, padding: enqPad, display: enqBDisplay, minHeight: enqHeight }}>
 						<h1 onClick={handleBClicked}>{textB}</h1>
-						{showFeed && <ContactForm isFlipped={true} />}
+						{showFeed && <ContactForm flippedState={true} />}
 					</Segment>
 				</Segment>
 			</Fade>
@@ -101,7 +101,7 @@ const ContactForm = (props) => {
 	const [feedEmail, setFeedEmail] = useState("");
 	const [feedMessage, setFeedMessage] = useState("");
 
-	const [isFlipped, setFlipped] = useState(false);
+	const [isFlipped, setIsFlipped] = useState(props.flippedState);
 
 	const onFirstNameChange = (e) => {
 		setBusFirstName(e.target.value);
@@ -136,7 +136,7 @@ const ContactForm = (props) => {
 	}
 
 	const handleFlip = () => {
-		setFlipped(!isFlipped);
+		setIsFlipped(!isFlipped);
 	}
 
 	const [radioValue, setRadioValue] = useState("this");
@@ -145,9 +145,9 @@ const ContactForm = (props) => {
 		setRadioValue("this");
 	}
 
-	if(props.flippedState === "true") {
-		setFlipped(true);
-	}
+	if(props.isFlipped === "true") {
+		setIsFlipped(true);
+	} 
 
 	const submitEmail = (e) => {
         e.preventDefault();
