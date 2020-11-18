@@ -6,7 +6,7 @@ import Zoom from 'react-reveal/Zoom';
 
 import ReactImageMagnify from 'react-image-magnify';
 
-import { Divider, Header, Icon, Image, Grid } from 'semantic-ui-react'
+import { Divider, Header, Icon, Image, Grid, Message } from 'semantic-ui-react'
 
 import Footer from '../Footer';
 
@@ -57,13 +57,13 @@ const PortfolioHead = () => {
 						<Header as="h1">About Me</Header>
 					</Bounce>
 
-					<p>
+					<Message>
 						I have over 10 years of experience as a software engineer, and have worked at both small startups and 
 						large organizations. While I'm a proficient front-end developer, my expertise is in building scalable
 						backend services.  I love creating things and researching new ideas and technologies. While software 
 						engineering problems are often intrinsically fun to tackle, I'm most attracted to solving real customer
 						problems with a business justification.
-					</p>
+					</Message>
 				</div>
 			</section>
 

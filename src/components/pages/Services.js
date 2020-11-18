@@ -46,7 +46,7 @@ const ServiceSection = () => {
 		<>
 			<Grid textAlign='center' columns='equal' centered stackable>
 				<Grid.Row textAlign='center'>
-					<Grid.Column textAlign='center'>
+					<Grid.Column textAlign='center' verticalAlign='middle'>
 						<Label color='red' size='massive' ribbon>Web Development</Label>
 						<Message size='medium'>
 							We offer a wide range of Web Development solutions ranging from basic Personal HTML/CSS sites, to complete CMS Apps deisgned to meet
@@ -59,16 +59,16 @@ const ServiceSection = () => {
 					</Grid.Column>
 
 					<Grid.Column>
-						<Image src="https://images.pexels.com/photos/1789968/pexels-photo-1789968.jpeg?auto=compress&cs=tinysrgb&dpr=1" />
+						<Image rounded size="large" src="https://images.pexels.com/photos/1789968/pexels-photo-1789968.jpeg?auto=compress&cs=tinysrgb&dpr=1" />
 					</Grid.Column>
 				</Grid.Row>
 
 				<Grid.Row textAlign='center'>
 					<Grid.Column>
-						<Image src="https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&dpr=1" />
+						<Image rounded size="large" src="https://images.pexels.com/photos/67112/pexels-photo-67112.jpeg?auto=compress&cs=tinysrgb&dpr=1" />
 					</Grid.Column>
 
-					<Grid.Column textAlign='center'>
+					<Grid.Column textAlign='center' verticalAlign='middle'>
 						<Label color='blue' size='massive' ribbon>Graphic Design</Label>
 						<Message size='medium'>
 							Whatever your logo or Graphic Design needs, we will make it our mission to make sure you are satisfied with the final result. We have many years experience

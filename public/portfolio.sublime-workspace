@@ -19,24 +19,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/Users/Greg/Documents/GitHub/portfolio/src/components/pages/Services.js",
-			"settings":
-			{
-				"buffer_size": 3091,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Users/Greg/Documents/GitHub/portfolio/src/components/css/Services.css",
-			"settings":
-			{
-				"buffer_size": 443,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -74,14 +56,13 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Greg/Documents/GitHub/portfolio",
-		"/C/Users/Greg/Documents/GitHub/portfolio/src",
-		"/C/Users/Greg/Documents/GitHub/portfolio/src/components",
-		"/C/Users/Greg/Documents/GitHub/portfolio/src/components/css",
-		"/C/Users/Greg/Documents/GitHub/portfolio/src/components/pages"
+		"/C/Users/Greg/Documents/GitHub/portfolio"
 	],
 	"file_history":
 	[
+		"/C/Users/Greg/Documents/GitHub/portfolio/src/components/css/Services.css",
+		"/C/Users/Greg/Documents/GitHub/portfolio/src/components/pages/Services.js",
+		"/C/Users/Greg/Documents/Vuze Downloads/[PC] GUN [RIP] [dopeman]/GUN/data/scripts/Gun.WidescreenFix.ini",
 		"/C/Users/Greg/Documents/GitHub/portfolio/.gitignore",
 		"/C/Users/Greg/Documents/GitHub/portfolio/src/App.js",
 		"/C/Users/Greg/Documents/GitHub/portfolio/src/components/Wheel.js",
@@ -152,80 +133,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/Users/Greg/Documents/GitHub/portfolio/src/components/pages/Services.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3091,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2162,
-								2162
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/TypeScript/TypeScriptReact.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 585.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/Users/Greg/Documents/GitHub/portfolio/src/components/css/Services.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 443,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								31,
-								31
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -313,8 +222,8 @@
 	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 230.0,
+	"side_bar_visible": true,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
