@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Radio, Message, Divider, Button, Form, TextArea, Header, Icon, Segment } from 'semantic-ui-react'
 
 import ReactCardFlip from 'react-card-flip';
@@ -23,6 +23,10 @@ const Contact = () => {
 };
 
 const ContactChoice = () => {
+	useEffect( () => {
+      {window.scroll(0,0)}
+   	});
+
 	const [enqABack, setEnqABack] = useState('linear-gradient(to right, #396afc, #2948ff)');
 	const [enqBBack, setEnqBBack] = useState('linear-gradient(to right, #f85032, #e73827)');
 
@@ -136,6 +140,7 @@ const ContactForm = (props) => {
 	}
 
 	const handleFlip = () => {
+		window.scroll(0, 0);
 		setIsFlipped(!isFlipped);
 	}
 
@@ -169,7 +174,6 @@ const ContactForm = (props) => {
 		<Pulse>
 		<ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
 			<Segment basic style={{ marginTop: '0', paddingTop: '0' }}>
-				<Flip left cascade><Header as="h1" style={{ marginTop: '0', paddingTop: '0', marginBottom: '3rem' }}>We Take Business Seriously</Header></Flip>
     			<Message
     				style={{ color: '#FFFFFF', backgroundImage: 'linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6)' }}
 					attached
@@ -254,7 +258,6 @@ const ContactForm = (props) => {
 			</Segment>
 
 			<Segment basic style={{ marginTop: '0', paddingTop: '0' }}>
-				<Flip left cascade><Header as="h1" style={{ marginTop: '0', paddingTop: '0', marginBottom: '3rem' }}>Let Us Know Your Thoughts!</Header></Flip>
     			<Message
     				style={{ color: '#FFFFFF', backgroundImage: 'linear-gradient(to right, #f85032, #e73827)' }}
 					attached
