@@ -6,7 +6,6 @@ import ReactCardFlip from 'react-card-flip';
 import axios from "axios";
 
 import Fade from "react-reveal/Fade";
-import Flip from "react-reveal/Flip";
 import Pulse from "react-reveal/Pulse";
 
 import "../css/Contact.css";
@@ -24,7 +23,7 @@ const Contact = () => {
 
 const ContactChoice = () => {
 	useEffect( () => {
-      {window.scroll(0,0)}
+      window.scroll(0,0)
    	});
 
 	const [enqABack, setEnqABack] = useState('linear-gradient(to right, #396afc, #2948ff)');
