@@ -8,12 +8,10 @@ import Portfolio from './components/pages/Portfolio';
 import Scripts from './components/pages/Scripts';
 import Contact from './components/pages/Contact';
 
-
 import 'semantic-ui-css/semantic.min.css'
-import './App.css';
 
 
-function App() {
+const App = () => {
   return (
     <>
       <Router>

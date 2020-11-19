@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Radio, Message, Divider, Button, Form, TextArea, Header, Icon, Segment } from 'semantic-ui-react'
+import { Radio, Message, Divider, Button, Form, TextArea, Header, Icon, Segment, Grid } from 'semantic-ui-react'
 
 import ReactCardFlip from 'react-card-flip';
 
@@ -68,25 +68,28 @@ const ContactChoice = () => {
 	return (
 		<>
 			<Divider horizontal>
-					<Header as='h2'>
-						<div>
-							<span><Icon name='angle double left' /></span>
-							<span>Contact Us</span>
-							<span><Icon name='angle double right' /></span>
-						</div>
-					</Header>
-				</Divider>
+				<Header as='h2'>
+					<span><Icon name='angle double left' /></span>
+					<span>Contact Us</span>
+					<span><Icon name='angle double right' /></span>
+				</Header>
+			</Divider>
 			<Fade cascade>
 				<Segment basic>
-					<Segment basic className="enqA" style={{ backgroundImage: enqABack, width: enqAWidth, padding: enqPad, display: enqADisplay, minHeight: enqHeight }}>
-						<h1 onClick={handleAClicked}>{textA}</h1>
-						{showBus && <ContactForm />}
-					</Segment>
 				
-					<Segment basic className="enqB" style={{ backgroundImage: enqBBack, width: enqBWidth, padding: enqPad, display: enqBDisplay, minHeight: enqHeight }}>
-						<h1 onClick={handleBClicked}>{textB}</h1>
-						{showFeed && <ContactForm flippedState={true} />}
-					</Segment>
+					<Grid columns='equal' padded relaxed>
+						<Grid.Row>
+							<Grid.Column color='blue'>
+								<Header className='enqA' as='h1' onClick={handleAClicked}>{textA}</Header>
+								{showBus && <ContactForm />}
+							</Grid.Column>
+							<Grid.Column color='red'>
+								<Header className='enqB' as='h1' onClick={handleBClicked}>{textB}</Header>
+								{showFeed && <ContactForm flippedState={true} />}
+							</Grid.Column>
+						</Grid.Row>
+					</Grid>
+					
 				</Segment>
 			</Fade>
 		</>
@@ -161,8 +164,7 @@ const ContactForm = (props) => {
           data:  this.state
         }).then((response)=>{
           if (response.data.status === 'success'){
-              alert("Message Sent."); 
-              this.resetForm()
+              alert("Message Sent.");
           }else if(response.data.status === 'fail'){
               alert("Message failed to send.")
           }
@@ -217,7 +219,7 @@ const ContactForm = (props) => {
 
       				<Form.Group>
       					<Form.Field>
-        					Your prefered contact method is: <b>{radioValue}</b>
+        					Your preferred contact method is: <b>{radioValue}</b>
         				</Form.Field>
         				<Form.Field>
 				          	<Radio
