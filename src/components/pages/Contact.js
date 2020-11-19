@@ -26,42 +26,18 @@ const ContactChoice = () => {
       window.scroll(0,0)
    	});
 
-	const [enqABack, setEnqABack] = useState('linear-gradient(to right, #396afc, #2948ff)');
-	const [enqBBack, setEnqBBack] = useState('linear-gradient(to right, #f85032, #e73827)');
-
 	const [textA, setTextA] = useState("BUSINESS PROJECT");
 	const [textB, setTextB] = useState("FEEDBACK ENQUIRY");
-
-	const [enqAWidth, setEnqAWidth] = useState("45%");
-	const [enqBWidth, setEnqBWidth] = useState("45%");
-
-	const [enqADisplay, setEnqADisplay] = useState("visible");
-	const [enqBDisplay, setEnqBDisplay] = useState("visible");
-
-	const [enqHeight, setEnqHeight] = useState("200px");
-
-	const [enqPad, setEnqPad] = useState("5rem");
-
 	const [showBus, setShowBus] = useState(false);
 	const [showFeed, setShowFeed] = useState(false);
-
+	
 	const handleAClicked = () => {
-		setEnqBDisplay("none");
-		setEnqAWidth("100%");
 		setTextA("");
-		setEnqABack('linear-gradient(to right, #FFFFFF, #FFFFFF)');
-		setEnqPad("1rem");
-		setEnqHeight("800px");
 		setShowBus(!showBus);
 	};
 
 	const handleBClicked = () => {
-		setEnqADisplay("none");
-		setEnqBWidth("100%");
 		setTextB("");
-		setEnqBBack('linear-gradient(to right, #FFFFFF, #FFFFFF)');
-		setEnqPad("1rem");
-		setEnqHeight("800px");
 		setShowFeed(!showFeed);
 	};
 
@@ -80,11 +56,11 @@ const ContactChoice = () => {
 					<Grid columns='equal' padded relaxed>
 						<Grid.Row>
 							<Grid.Column color='blue'>
-								<Header className='enqA' as='h1' onClick={handleAClicked}>{textA}</Header>
+								<Header className='enq' as='h1' onClick={handleAClicked}>{textA}</Header>
 								{showBus && <ContactForm />}
 							</Grid.Column>
 							<Grid.Column color='red'>
-								<Header className='enqB' as='h1' onClick={handleBClicked}>{textB}</Header>
+								<Header className='enq' as='h1' onClick={handleBClicked}>{textB}</Header>
 								{showFeed && <ContactForm flippedState={true} />}
 							</Grid.Column>
 						</Grid.Row>
