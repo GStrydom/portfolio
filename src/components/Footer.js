@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import { Button as SemanticButton} from 'semantic-ui-react'
 import NewsForm from './NewsForm';
