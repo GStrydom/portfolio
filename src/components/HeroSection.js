@@ -14,6 +14,7 @@ function HeroSection() {
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
+          linkTo='/portfolio'
         >
           PORTFOLIO
         </Button>
