@@ -77,6 +77,7 @@ function Footer() {
           <small class='website-rights'>NLP © 2020</small>
           <div class='social-icons'>
             <Link
+              onClick={handleNulls}
               class='social-icon-link facebook'
               to='/'
               target='_blank'
@@ -85,6 +86,7 @@ function Footer() {
               <i class='fab fa-facebook-f' />
             </Link>
             <Link
+              onClick={handleNulls}
               class='social-icon-link instagram'
               to='/'
               target='_blank'
@@ -93,6 +95,7 @@ function Footer() {
               <i class='fab fa-instagram' />
             </Link>
             <Link
+              onClick={handleNulls}
               class='social-icon-link youtube'
               to='/'
               target='_blank'
@@ -101,6 +104,7 @@ function Footer() {
               <i class='fab fa-youtube' />
             </Link>
             <Link
+              onClick={handleNulls}
               class='social-icon-link twitter'
               to='/'
               target='_blank'
@@ -109,6 +113,7 @@ function Footer() {
               <i class='fab fa-twitter' />
             </Link>
             <Link
+              onClick={handleNulls}
               class='social-icon-link twitter'
               to='/'
               target='_blank'
