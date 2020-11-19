@@ -6,6 +6,12 @@ import { Button as SemanticButton} from 'semantic-ui-react'
 
 
 function Footer() {
+
+  const handleNulls = (e) => {
+    e.preventDefault();
+    alert('This link is being built!');
+  }
+
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -48,15 +54,15 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Software</h2>
-            <Link to='/'>Github</Link>
-            <Link to='/'>CodePen</Link>
+            <Link onClick={handleNulls} to='/'>Github</Link>
+            <Link onClick={handleNulls} to='/'>CodePen</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <Link onClick={handleNulls} to='/'>Instagram</Link>
+            <Link onClick={handleNulls} to='/'>Facebook</Link>
+            <Link onClick={handleNulls} to='/'>Youtube</Link>
+            <Link onClick={handleNulls} to='/'>Twitter</Link>
           </div>
         </div>
       </div>
