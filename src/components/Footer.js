@@ -3,6 +3,7 @@ import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import { Button as SemanticButton} from 'semantic-ui-react'
+import NewsForm from './NewsForm';
 
 
 function Footer() {
@@ -29,15 +30,7 @@ function Footer() {
           Subscribe for the latest news
         </p>
         <div className='input-areas'>
-          <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
-            />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
-          </form>
+          <NewsForm />
         </div>
       </section>
       <div class='footer-links'>
