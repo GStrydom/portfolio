@@ -1,7 +1,9 @@
-var express = require('express');
-var router = express.Router();
-var nodemailer = require('nodemailer');
-var cors = require('cors');
+import * as transporter from "@babel/traverse";
+
+let express = require('express');
+let router = express.Router();
+let nodemailer = require('nodemailer');
+let cors = require('cors');
 
 nodemailer.createTransport({
   host: "smtp.example.com", //replace with your email provider
@@ -22,16 +24,18 @@ transporter.verify(function(error, success) {
 });
 
 router.post('/send', (req, res, next) => {
-  var name = req.body.name
-  var email = req.body.email
-  var subject = req.body.subject
-  var message = req.body.message
-  var content = `name: ${name} \n email: ${email} \n subject: ${subject} \n message: ${message} `  var mail = {
+  let name = req.body.name
+  let email = req.body.email
+  let subject = req.body.subject
+  let message = req.body.message
+  let content = `name: ${name} \n email: ${email} \n subject: ${subject} \n message: ${message}`
+  let mail = {
     from: name,
-    to: // receiver email,
+    to: 'greg@gmail.com',
     subject: subject,
     text: content
-  }  transporter.sendMail(mail, (err, data) => {
+  };
+  transporter.sendMail(mail, (err, data) => {
     if (err) {
       res.json({
         status: 'fail'

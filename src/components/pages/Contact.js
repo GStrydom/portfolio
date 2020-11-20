@@ -129,7 +129,7 @@ const ContactForm = (props) => {
         e.preventDefault();
         axios({
           method: "POST", 
-          url:"/send", 
+          url:"/sendMail",
           data:  this.state
         }).then((response)=>{
           if (response.data.status === 'success'){
