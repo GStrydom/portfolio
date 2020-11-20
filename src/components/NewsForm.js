@@ -10,11 +10,15 @@ class NewsForm extends React.Component {
   checkEmail = (event) => {
     this.setState({email: event.target.value});
   }
+  sendEmail = (event) => {
+    event.preventDefault();
+    alert("You have subscribed with the following email address: " + this.state.email);
+  }
   render() {
     return (
-      <form>
+      <form onSubmit={this.sendEmail}>
           <input className='footer-input' name='email' type='email' placeholder='Your Email' onChange={this.checkEmail} />
-          <Button buttonStyle='btn--outline'>Subscribe</Button>
+          <Button buttonStyle='btn--outline' type='submit'>Subscribe</Button>
       </form>
     );
   }

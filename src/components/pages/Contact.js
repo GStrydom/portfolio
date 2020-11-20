@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Radio, Message, Divider, Button, Form, TextArea, Header, Icon, Segment, Grid } from 'semantic-ui-react'
+import { Message, Divider, Button, Form, TextArea, Header, Icon, Segment, Grid } from 'semantic-ui-react'
 
 import ReactCardFlip from 'react-card-flip';
 
@@ -24,7 +24,7 @@ const Contact = () => {
 const ContactChoice = () => {
 	useEffect( () => {
       window.scroll(0,0)
-   	});
+   	}, []);
 
 	const [textA, setTextA] = useState("BUSINESS PROJECT");
 	const [textB, setTextB] = useState("FEEDBACK ENQUIRY");
@@ -32,12 +32,10 @@ const ContactChoice = () => {
 	const [showFeed, setShowFeed] = useState(false);
 	
 	const handleAClicked = () => {
-		setTextA("");
 		setShowBus(!showBus);
 	};
 
 	const handleBClicked = () => {
-		setTextB("");
 		setShowFeed(!showFeed);
 	};
 
@@ -50,22 +48,21 @@ const ContactChoice = () => {
 					<span><Icon name='angle double right' /></span>
 				</Header>
 			</Divider>
+			
 			<Fade cascade>
 				<Segment basic>
-				
 					<Grid columns='equal' padded relaxed>
 						<Grid.Row>
-							<Grid.Column color='blue'>
+							<Grid.Column color='blue' className='colA' textAlign='center'>
 								<Header className='enq' as='h1' onClick={handleAClicked}>{textA}</Header>
 								{showBus && <ContactForm />}
 							</Grid.Column>
-							<Grid.Column color='red'>
+							<Grid.Column color='red' className='colB' textAlign='center'>
 								<Header className='enq' as='h1' onClick={handleBClicked}>{textB}</Header>
 								{showFeed && <ContactForm flippedState={true} />}
 							</Grid.Column>
 						</Grid.Row>
 					</Grid>
-					
 				</Segment>
 			</Fade>
 		</>
@@ -82,6 +79,9 @@ const ContactForm = (props) => {
 	const [feedName, setFeedName] = useState("");
 	const [feedEmail, setFeedEmail] = useState("");
 	const [feedMessage, setFeedMessage] = useState("");
+	
+	const [buttonAColor, setButtonAColor] = useState("red");
+	const [buttonBColor, setButtonBColor] = useState("blue");
 
 	const [isFlipped, setIsFlipped] = useState(props.flippedState);
 
@@ -155,9 +155,8 @@ const ContactForm = (props) => {
     				style={{ color: '#FFFFFF', backgroundImage: 'linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6)' }}
 					attached
      	 			content='Let us know your software requirements and an agent will get back to your shortly.'
-     	 			size='tiny'
     			/>
-    			<Form className='attached fluid segment formBox' size="big">
+    			<Form className='attached fluid segment formBox' size="medium">
       				<Form.Group widths='equal'>
 				        <Form.Input
 				          fluid
@@ -177,44 +176,22 @@ const ContactForm = (props) => {
 				        />
       				</Form.Group>
 
-      				<Form.Group>
-      					<Form.Input 
+      				<Form.Group widths='equal'>
+      					<Form.Input
+      						fluid
       						label='Phone Number' 
       						placeholder='Phone Number' 
       						type='text'
       						onChange={onBusPhoneChange}
 							value={busPhone}
       					/>
-      					<Form.Input 
+      					<Form.Input
+      						fluid
       						label='Email' type='email'
       						placeholder='Email'
       						onChange={onBusEmailChange}
 							value={busEmail}
       					/>
-      				</Form.Group>
-
-      				<Form.Group>
-      					<Form.Field>
-        					Your preferred contact method is: <b>{radioValue}</b>
-        				</Form.Field>
-        				<Form.Field>
-				          	<Radio
-					            label='Email'
-					            name='radioGroup'
-					            value='this'
-					            checked={radioValue === 'this'}
-					            onChange={onRadioChange}
-				          	/>
-        				</Form.Field>
-        				<Form.Field>
-				          	<Radio
-					            label='Phone'
-					            name='radioGroup'
-					            value='that'
-					            checked={radioValue === 'that'}
-					            onChange={onRadioChange}
-				          	/>
-        				</Form.Field>
       				</Form.Group>
 
 					<Form.Group>
@@ -230,7 +207,7 @@ const ContactForm = (props) => {
     			</Form>
     			<Message size='large' attached="bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 					<Header as="h4" style={{ marginBottom: '1rem' }}>Switch To Feedback</Header>
-					<Button size="medium" color="red" onClick={handleFlip}>Switch</Button>
+					<Button size="medium" color={buttonAColor} onClick={handleFlip}>Switch</Button>
 				</Message>
 			</Segment>
 
@@ -238,10 +215,9 @@ const ContactForm = (props) => {
     			<Message
     				style={{ color: '#FFFFFF', backgroundImage: 'linear-gradient(to right, #f85032, #e73827)' }}
 					attached
-     	 			content='We appreciate and take note of every feedback message we receive, so please let us know how you think we can improve.'
-     	 			size='tiny'
+     	 			content='We appreciate and take note of every feedback message we receive!'
     			/>
-    			<Form className='attached fluid segment formBox' size="big">
+    			<Form className='attached fluid segment formBox' size="medium">
       				<Form.Group widths='equal'>
 				        <Form.Input
 				          fluid
@@ -272,7 +248,7 @@ const ContactForm = (props) => {
     			</Form>
     			<Message size='large' attached="bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 					<Header as="h6">Switch To Business</Header>
-					<Button size="medium" primary onClick={handleFlip}>Switch</Button>
+					<Button size="medium" color={buttonBColor} onClick={handleFlip}>Switch</Button>
 				</Message>
 			</Segment>
 		</ReactCardFlip>
