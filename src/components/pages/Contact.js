@@ -200,7 +200,7 @@ const ContactForm = (props) => {
     			</Form>
     			<Message size='large' attached="bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 					<Header as="h4" style={{ marginBottom: '1rem' }}>Switch To Feedback</Header>
-					<Button size="medium" color={buttonAColor} onClick={handleFlip}>Switch</Button>
+					<Button size="medium" color='red' onClick={handleFlip}>Switch</Button>
 				</Message>
 			</Segment>
 
@@ -241,7 +241,7 @@ const ContactForm = (props) => {
     			</Form>
     			<Message size='large' attached="bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 					<Header as="h6">Switch To Business</Header>
-					<Button size="medium" color={buttonBColor} onClick={handleFlip}>Switch</Button>
+					<Button size="medium" color='blue' onClick={handleFlip}>Switch</Button>
 				</Message>
 			</Segment>
 		</ReactCardFlip>
