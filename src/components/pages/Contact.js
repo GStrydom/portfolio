@@ -120,9 +120,6 @@ const ContactForm = (props) => {
 	const handleFlip = () => {
 		window.scroll(0, 0);
 		setIsFlipped(!isFlipped);
-		if(textA == "BUSINESS PROJECT") {
-			setTextA("FEEDBACK");
-		}
 	}
 
 	const [radioValue, setRadioValue] = useState("this");
