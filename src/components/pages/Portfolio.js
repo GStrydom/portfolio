@@ -12,7 +12,7 @@ import Footer from '../Footer';
 
 import "../css/Portfolio.css";
 
-import profilepic from "../images/profile.png";
+import profilepic from "../../images/profile.png";
 import resumepic from "../images/resume.jpg";
 
 
