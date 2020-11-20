@@ -32,10 +32,12 @@ const ContactChoice = () => {
 	const [showFeed, setShowFeed] = useState(false);
 	
 	const handleAClicked = () => {
+		setTextA('');
 		setShowBus(!showBus);
 	};
 
 	const handleBClicked = () => {
+		setTextB('');
 		setShowFeed(!showFeed);
 	};
 
@@ -79,9 +81,6 @@ const ContactForm = (props) => {
 	const [feedName, setFeedName] = useState("");
 	const [feedEmail, setFeedEmail] = useState("");
 	const [feedMessage, setFeedMessage] = useState("");
-	
-	const [buttonAColor, setButtonAColor] = useState("red");
-	const [buttonBColor, setButtonBColor] = useState("blue");
 
 	const [isFlipped, setIsFlipped] = useState(props.flippedState);
 
@@ -120,12 +119,6 @@ const ContactForm = (props) => {
 	const handleFlip = () => {
 		window.scroll(0, 0);
 		setIsFlipped(!isFlipped);
-	}
-
-	const [radioValue, setRadioValue] = useState("this");
-
-	const onRadioChange = () => {
-		setRadioValue("this");
 	}
 
 	if(props.isFlipped === "true") {
