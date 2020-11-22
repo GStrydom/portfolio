@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal } from 'semantic-ui-react';
+import { Button, Modal, Segment } from 'semantic-ui-react';
 
 
 function EightBall() {
