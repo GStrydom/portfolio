@@ -14,9 +14,9 @@ function EightBall() {
     >
       <Modal.Header>StopWatch</Modal.Header>
       <Modal.Content>
-		<div>
-			<h1>Magic 8-Ball</h1>
-		</div>
+		<Segment basic>
+			
+		</Segment>
       </Modal.Content>
       <Modal.Actions>
         <Button color='red' onClick={() => setOpen(false)}>
