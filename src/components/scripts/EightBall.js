@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Button, Modal, Segment } from 'semantic-ui-react';
+import { Button, Modal, Segment, Image, Input } from 'semantic-ui-react';
+
+import eight_proto from '../images/eight_proto.png';
 
 
 function EightBall() {
@@ -12,11 +14,12 @@ function EightBall() {
       open={open}
       trigger={<Button>Launch Script</Button>}
     >
-      <Modal.Header>StopWatch</Modal.Header>
+      <Modal.Header>Magic 8 Ball</Modal.Header>
       <Modal.Content>
-		<Segment basic>
-			
-		</Segment>
+		    <Segment basic centered>
+			    <Image size='small' src={eight_proto} />
+          <Input icon='search' placeholder='Ask me anything...' />
+		    </Segment>
       </Modal.Content>
       <Modal.Actions>
         <Button color='red' onClick={() => setOpen(false)}>
