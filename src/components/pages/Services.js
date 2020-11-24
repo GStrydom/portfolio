@@ -47,14 +47,14 @@ const ServiceSection = () => {
 		    <Grid textAlign='center' columns='equal' centered stackable padded relaxed>
 				<Grid.Row textAlign='center'>
 					<Grid.Column textAlign='center' verticalAlign='middle'>
-						<Label color='red' size='massive' ribbon>Web Development</Label>
+						<Label color='red' size='massive' className="labels" style={{marginLeft: "5rem", marginBottom: "3rem"}} ribbon>Web Development</Label>
 						<Message size='medium'>
 						We offer a wide range of Web Development solutions ranging from basic Personal HTML/CSS sites, to complete CMS Apps deisgned to meet
 						the demands of business.  We are trained in multiple Web FrameWorks including React, Laravel and Django, and are proficient with most DBMS.
 						</Message>
-						<Button color='red' animated size="large">
-						<Button.Content visible>Get A Quote</Button.Content>
-						<Button.Content hidden><Icon name="arrow alternate circle right" /></Button.Content>
+						<Button color='red' animated size="large" style={{marginTop: "1.5rem"}}>
+						    <Button.Content visible>Get A Quote</Button.Content>
+						    <Button.Content hidden><Icon name="arrow alternate circle right" /></Button.Content>
 						</Button>
 					</Grid.Column>
 
@@ -74,12 +74,12 @@ const ServiceSection = () => {
                     </Grid.Column>
 
 					<Grid.Column textAlign='center' verticalAlign='middle'>
-						<Label color='blue' size='massive' ribbon>Graphic Design</Label>
+						<Label color='blue' className="labels" size='massive' style={{marginLeft: "4.5rem", marginBottom: "3rem"}} ribbon>Graphic Design</Label>
 						<Message size='medium'>
 							Whatever your logo or Graphic Design needs, we will make it our mission to make sure you are satisfied with the final result. We have many years experience
 							with Adobe Photoshop &amp; Illustrator and uesd many more tools to create High Quality designs.
 						</Message>
-						<Button primary animated size="large">
+						<Button primary animated size="large" style={{marginTop: "1.5rem"}}>
 							<Button.Content visible>Get A Quote</Button.Content>
 							<Button.Content hidden><Icon name="arrow alternate circle right" /></Button.Content>
 						</Button>
