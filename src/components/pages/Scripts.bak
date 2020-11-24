@@ -12,7 +12,7 @@ import '../css/Scripts.css';
 const Scripts =() => {
   return (
   	<>
-  	        <Head />
+  		<Head />
 		  <Wheel />
   		<Footer />
   	</>

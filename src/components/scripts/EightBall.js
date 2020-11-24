@@ -18,7 +18,7 @@ function EightBall() {
       <Modal.Content>
 		    <Segment basic centered>
 			    <Image size='small' src={eight_proto} />
-          <Input icon='search' placeholder='Ask me anything...' />
+          		<Input icon='search' placeholder='Ask me anything...' />
 		    </Segment>
       </Modal.Content>
       <Modal.Actions>

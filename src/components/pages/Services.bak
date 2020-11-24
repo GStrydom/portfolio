@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, Header, Message, Button, Icon, Segment, Label } from 'semantic-ui-react';
+import { Grid, Image, Header, Message, Button, Icon, Segment, Label } from 'semantic-ui-react';
 
 import Footer from '../Footer';
 
