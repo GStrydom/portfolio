@@ -21,7 +21,7 @@ function EightBall() {
       <Modal.Header>Magic 8 Ball</Modal.Header>
       <Modal.Content>
 		    <Segment basic centered>
-			    <div style={{textAlign: 'center'}} class='ui centered'><Image size='small' src={eight_proto} /><span>{answer}</span></div>
+			    <div style={{textAlign: 'center'}} class='centered'><Image size='small' src={eight_proto} /><span>{answer}</span></div>
           		<Input icon='search' placeholder='Ask me anything...' />
 		    </Segment>
       </Modal.Content>

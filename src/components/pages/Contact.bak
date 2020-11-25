@@ -236,7 +236,7 @@ const ContactForm = (props) => {
 							value={feedMessage}
 						/>
 					</Form.Group>
-
+					
       				<Button size="big" color='red' onClick={submitEmail}>Contact</Button>
     			</Form>
     			<Message size='large' attached="bottom" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
