@@ -14,8 +14,6 @@ import "../css/Portfolio.css";
 
 import profilepic from "../../images/profile.png";
 import resumepic from "../images/resume.jpg";
-
-import angularSkill from '../../images/skills/angular.png'
 import phpSkill from '../../images/skills/php.png'
 import reactSkill from '../../images/skills/react.png'
 
