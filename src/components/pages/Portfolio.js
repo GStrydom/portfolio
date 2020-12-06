@@ -15,7 +15,7 @@ import "../css/Portfolio.css";
 import profilepic from "../../images/profile.png";
 import resumepic from "../images/resume.jpg";
 
-import angularskill from '../../images/angular.png';
+import angularSkill from '../../images/skills/angular.png';
 import phpSkill from '../../images/skills/php.png'
 import reactSkill from '../../images/skills/react.png'
 import firebaseSkill from '../../images/skills/firebaseskill.png'
@@ -101,7 +101,7 @@ const PortfolioSkills = () => {
         						<Fade top><div><Image size="tiny" src={phpSkill} avatar /><span>PHP</span></div></Fade>
       						</Grid.Column>
       						<Grid.Column textAlign='center' verticalAlign='middle'>
-        						<Fade top><div><Image size="tiny" src={angularskill} avatar /><span>Angular</span></div></Fade>
+        						<Fade top><div><Image size="tiny" src={angularSkill} avatar /><span>Angular</span></div></Fade>
       						</Grid.Column>
        						<Grid.Column textAlign='center' verticalAlign='middle'>
         						<Fade top><div><Image size="tiny" src={reactSkill} avatar /><span>React</span></div></Fade>
