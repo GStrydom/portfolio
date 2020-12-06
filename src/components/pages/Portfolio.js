@@ -14,8 +14,11 @@ import "../css/Portfolio.css";
 
 import profilepic from "../../images/profile.png";
 import resumepic from "../images/resume.jpg";
+
+import angularskill from '../../images/angular.png';
 import phpSkill from '../../images/skills/php.png'
 import reactSkill from '../../images/skills/react.png'
+import firebaseSkill from '../../images/skills/firebaseskill.png'
 
 
 const Portfolio = () => {
@@ -73,7 +76,7 @@ const PortfolioHead = () => {
 				<Divider horizontal>
 					<Header as='h1'>
 						<div className="showSkillText">
-							<span onClick={() => setShowSkills(!showSkills)}>Show Skills</span><br />
+							<span onClick={() => setShowSkills(!showSkills)}>Web Development Skills</span><br />
 						</div>
 					</Header>
 				</Divider>
@@ -97,6 +100,9 @@ const PortfolioSkills = () => {
       						<Grid.Column textAlign='center' verticalAlign='middle'>
         						<Fade top><div><Image size="tiny" src={phpSkill} avatar /><span>PHP</span></div></Fade>
       						</Grid.Column>
+      						<Grid.Column textAlign='center' verticalAlign='middle'>
+        						<Fade top><div><Image size="tiny" src={angularskill} avatar /><span>Angular</span></div></Fade>
+      						</Grid.Column>
        						<Grid.Column textAlign='center' verticalAlign='middle'>
         						<Fade top><div><Image size="tiny" src={reactSkill} avatar /><span>React</span></div></Fade>
         					</Grid.Column>
@@ -107,6 +113,9 @@ const PortfolioSkills = () => {
     					</Grid.Row>
 
 					    <Grid.Row>
+					    	<Grid.Column textAlign='center' verticalAlign='middle'>
+        						<Fade top><div><Image size="tiny" src={firebaseSkill} avatar /><span>Firebase</span></div></Fade>
+      						</Grid.Column>
 					    	<Grid.Column textAlign='center' verticalAlign='middle'>
 					        	<Fade right><div><Image size="tiny" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATIAAACkCAMAAAAjUFIdAAAAeFBMVEUmEwD/gxkAAAD/fxgQCAAPCADRaBOjUQ/ebhUaDQB6PQvpdBYIBACvVxDCYBL/gRjIZBIgEABOJwYYDABIJAUeDwD/hhktFwGxWBDxeBc7HQNhMAiBQAtvOAlCIQS6XRFYLAenUw8wGAKNRgxpNAmcTg7YbBQ1GwNgx6ZkAAACw0lEQVR4nO3b23KqMBhAYROIRzSionhq67a17/+GOz8IktiZPfHG2XV9F7Ug7cgakBi11wMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPi/FelDls9+3M+TDmzyANvPnv3In0aSqWjW9vWzH/nTpAO1PY4jHfsvnmyiR5H0TL16stg/ykgW+0ckI1kUkkUjWTSSRSNZNJJF+zFZLryttOkukizc+/xt5WxuK8zgUo46G5As3PtCXnmv39u5ivS0tmrembogWbD3o7GS+Z1tu1oPZbmzFcmCvc9m1RSaWjVPZ9lcJXZIsqsfkmk5xJLEfqXXFflumEwWnesByfy9Lz7cMTVw2W7HVa5T3b2Ckszf+/RkE7W/uB/tqpExhitm4z6ZnriTMpP57cP1PZHRuCzLQ6cZyby9z/8oOSf37uxsxhXpVDHIuLlLtjy7WFOTdcYVcqpakjXukum+OyU/i+pmX9TbkKzrLpmRIZnupV9WDrZ6G5J1hclGR3deXnQvd0ON5HoPyTxhMlPKqCytB7RqV43GSOYJk2k37lcL7cxdp3M1zCCZJ0iWr+QleV/I8KwOQzJPkEye9V0qUX1apXr+J5knSFbP87TUWMb8JPOEz2VyXjaf73FHWTXPSDKPn2x5UDK3aISuf++RLOAny+QyOauX828lF8+cZAE/WTUYayYwqikNGaKRzOMlK/ZyYG2us4mmtPU8I8k8XjIzte2rpPq1U2JdQJJ5vGTVqTht3+XVqj5NSebpJsvf1kqtP4vmPn1Zq3U/66VlfdsiWbv3m4VT3O78dovy1pzc7niH6cq/YoafxWiWg/Uk45M/UUgWjWTRSBaNZNFIFo1k0UgWjWTRqmQm0st/uXB7mkY6DV/6K6wnZfmidJTlefiQd/Pv//1bLfVDXrgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4Jf4CWGAxUlve8s8AAAAASUVORK5CYII=" avatar /><span>Illustrator</span></div></Fade>
 					      	</Grid.Column>
