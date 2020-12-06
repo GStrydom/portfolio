@@ -15,11 +15,7 @@ import "../css/Portfolio.css";
 import profilepic from "../../images/profile.png";
 import resumepic from "../images/resume.jpg";
 
-import javascriptSkill from '../../images/skills/javascript.png'
 import angularSkill from '../../images/skills/angular.png'
-import djangoSkill from '../../images/skills/django.png'
-import htmlSkill from '../../images/skills/html.png'
-import codeigniterSkill from '../../images/skills/codeigniter.png'
 import phpSkill from '../../images/skills/php.png'
 import reactSkill from '../../images/skills/react.png'
 
