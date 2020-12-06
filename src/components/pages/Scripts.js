@@ -6,7 +6,7 @@ import Wheel from "../Wheel";
 import Footer from '../Footer';
 
 import '../../App.css';
-import '../css/Scripts.css';
+import '../../css/Scripts.css';
 
 
 const Scripts =() => {

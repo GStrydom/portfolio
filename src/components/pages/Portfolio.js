@@ -10,7 +10,7 @@ import { Divider, Header, Icon, Image, Grid, Message } from 'semantic-ui-react'
 
 import Footer from '../Footer';
 
-import "../css/Portfolio.css";
+import "../../css/Portfolio.css";
 
 import profilepic from "../../images/profile.png";
 import resumepic from "../images/resume.jpg";

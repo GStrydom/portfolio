@@ -6,7 +6,7 @@ import Footer from '../Footer';
 
 import Flash from "react-reveal/Flash";
 
-import "../css/Services.css";
+import "../../css/Services.css";
 
 
 const Services = () => {

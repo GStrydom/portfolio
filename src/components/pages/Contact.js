@@ -8,7 +8,7 @@ import axios from "axios";
 import Fade from "react-reveal/Fade";
 import Pulse from "react-reveal/Pulse";
 
-import "../css/Contact.css";
+import "../../css/Contact.css";
 import Footer from "../Footer";
 
 
