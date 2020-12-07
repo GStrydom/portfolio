@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Segment, Image, Input } from 'semantic-ui-react';
 
-import eight_proto from '../images/eight_proto.png';
+import eight_proto from '../../images/eight_proto.png';
 
 let answers = ['It is certainly so', 'Ask again later', 'Most certainly', 'Most probably not'];
 let answerNum = Math.floor(Math.random() * answers.length);
