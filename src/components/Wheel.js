@@ -10,7 +10,7 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
 import "./WheelAnimations.css";
-import "../../css/Wheel.css"
+import "../css/Wheel.css"
 
 
 const content = [
