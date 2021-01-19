@@ -152,14 +152,14 @@ const PortfolioResume = () => {
 						smallImage: {
 							alt: 'Resume Small',
 							src: resumepic,
-							width: 600,
-							height: 800,
+							width: 400,
+							height: 600,
 						},
 						largeImage: {
 							alt: 'Resume Small',
 							src: resumepic,
-							width: 1000,
-							height: 1200,
+							width: 800,
+							height: 1000,
 						}
 					}} />
 				</Bounce>
