@@ -16,6 +16,7 @@ class NewsForm extends React.Component {
 
     checkEmail = (event) => {
         this.setState({email: event.target.value});
+        handleNulls();
     }
 
     sendEmail = (event) => {

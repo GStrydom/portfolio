@@ -13,7 +13,7 @@ function chooseAnswer() {
 
 function EightBall() {
   const [open, setOpen] = useState(false);
-  const [answer, setAnswer] = useState("");
+  // const [answer, setAnswer] = useState("");
 
   return (
     <Modal
@@ -27,7 +27,7 @@ function EightBall() {
 
     <Modal.Content>
 		<Segment basic centered>
-    		<div class='ui centered'><Image size='small' src={eight_proto} /><span>{answer}</span></div>
+    		<div class='ui centered'><Image size='small' src={eight_proto} /><span></span></div>
             <Input icon='search' placeholder='Ask me anything...' />
             <Button 
                 color='green'

@@ -4,7 +4,7 @@ import StopWatch from "./scripts/StopWatch";
 import EightBall from "./scripts/EightBall";
 // import SiteWeather from "./scripts/SiteWeather";
 import Phone from "./scripts/Phone";
-import Torrex from "./scripts/Torrex";
+// import Torrex from "./scripts/Torrex";
 import Construction from "./scripts/Construction.js";
 
 import Slider from 'react-animated-slider';
