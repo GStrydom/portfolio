@@ -5,6 +5,7 @@ import EightBall from "./scripts/EightBall";
 // import SiteWeather from "./scripts/SiteWeather";
 import Phone from "./scripts/Phone";
 import Torrex from "./scripts/Torrex";
+import Construction from "./scripts/Construction.js";
 
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
@@ -43,7 +44,7 @@ const content = [
         image: "https://images.unsplash.com/photo-1508697014387-db70aad34f4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
         codelang: "Javascript, PHP",
         github: "",
-        component: ''
+        component: <Construction />
 
     },
 
@@ -65,7 +66,7 @@ const content = [
         image: "https://images.unsplash.com/photo-1534833697616-825d2698fa12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=701&q=80",
         codelang: "Javascript, Python",
         github: "",
-        component: <Torrex />
+        component: <Construction />
 
     },
 ]
